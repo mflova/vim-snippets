@@ -43,24 +43,22 @@ snippet awith
 		${0:${VISUAL}}
 # New Class
 snippet cl
-	class ${1:ClassName}(${2:object}):
-		"""${3:docstring for $1}"""
-		def __init__(self, ${4:arg}):
-			${5:super($1, self).__init__()}
-			self.$4 = $4
-			${0}
+	class ${1:class_name}:
+
 snippet cla
 	class ${1:class_name}:
-		"""${0:description}"""
+
+snippet cli
+	class ${1:class_name}:
+		def __init__(self, ${3:args}):
+			${0}
 snippet clai
 	class ${1:class_name}:
-		"""${2:description}"""
 		def __init__(self, ${3:args}):
 			${0}
 # New Function
 snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
-		"""${3:docstring for $1}"""
 		${0}
 snippet deff
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
@@ -459,3 +457,16 @@ snippet numeric "methods for emulating a numeric type" b
 	def __coerce__(self, other):
 		${25:pass}
 
+# Fo
+snippet for
+	for ${1:item} in ${2:items}:
+		${0}
+
+snippet id " Index
+	${1:var_name}['${2}']${0}
+
+snippet id' " Index
+	${1:var_name}['${2}']${0}
+
+snippet id" " Index
+	${1:var_name}['${2}']${0}
